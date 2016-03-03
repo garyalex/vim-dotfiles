@@ -1,0 +1,60 @@
+call pathogen#infect()
+set background=dark
+set nu
+syntax on
+let mapleader=","
+
+"color 
+
+set nocompatible
+filetype indent plugin on
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set smarttab
+set autoindent
+
+" enhanced command-line completion
+set wildmenu      
+" always show status line  
+set laststatus=2  
+set ruler
+"set noshowmode
+"set mouse=a
+
+let g:syntastic_enable_signs=1
+let g:syntastic_quiet_messages = {'level': 'warnings'}
+let g:syntastic_python_python_exec = '/usr/bin/python2.7'
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" YouCompleteMe options
+let g:ycm_key_invoke_completion = '<C-Space>'
+
+"To enable Just puppet-lint and disable the parser uncomment next line
+"let g:syntastic_puppet_checkers=['puppetlint']
+
+"
+"" Snippets
+"
+"" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<C-k>"
+let g:UltiSnipsJumpForwardTrigger="<C-b>"
+let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+"
+let g:vim_markdown_folding_disabled=1
+"Remap alt+arrows to switch splits
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+"Remap ctrl+arrows to switch tab
+nmap <silent> <c-Up> :tabnew<CR>
+nmap <silent> <c-Down> :tabclose<CR>
+nmap <silent> <c-Left> :tabprevious<CR>
+nmap <silent> <c-Right> :tabnext<CR>
